@@ -1,0 +1,22 @@
+{
+  "name": "gemini-api-node",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "keywords": [],
+  "author": "Yusuf Bahtiar",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@google/genai": "^1.21.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "multer": "^2.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
