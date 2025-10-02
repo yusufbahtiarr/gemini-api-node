@@ -1,0 +1,55 @@
+### Test Generate Text
+POST http://localhost:3000/generate-text
+Content-Type: application/json
+
+{
+  "prompt": "Tolong buatkan ringkasan tentang bahasa pemrograman golang."
+}
+
+
+### Test Generate from Image
+POST http://localhost:3000/generate-from-image
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="prompt"
+
+Jelaskan isi gambar ini.
+--WebAppBoundary
+Content-Disposition: form-data; name="image"; filename="example.png"
+Content-Type: image/png
+
+< ./example.png
+--WebAppBoundary--
+
+
+### Test Generate from Document
+POST http://localhost:3000/generate-from-document
+Content-Type: multipart/form-data; boundary=DocBoundary
+
+--DocBoundary
+Content-Disposition: form-data; name="prompt"
+
+Ringkas dokumen berikut.
+--DocBoundary
+Content-Disposition: form-data; name="document"; filename="sample.pdf"
+Content-Type: application/pdf
+
+< ./sample.pdf
+--DocBoundary--
+
+
+### Test Generate from Audio
+POST http://localhost:3000/generate-from-audio
+Content-Type: multipart/form-data; boundary=AudioBoundary
+
+--AudioBoundary
+Content-Disposition: form-data; name="prompt"
+
+Transkripkan audio berikut.
+--AudioBoundary
+Content-Disposition: form-data; name="audio"; filename="sample.mp3"
+Content-Type: audio/mpeg
+
+< ./sample.mp3
+--AudioBoundary--
