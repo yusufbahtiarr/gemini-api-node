@@ -47,6 +47,7 @@ Lalu isi dengan konfigurasi berikut:
 
 ```bash
 API_KEY=your_generated_api_key_here
+MODEL=gemini-2.5-flash
 ```
 
 ### 5. Jalankan server
